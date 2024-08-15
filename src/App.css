@@ -1,0 +1,7 @@
+.content {
+  padding-top: 60px; /* Adjust based on your NavigationBar height */
+}
+body {
+  background-color: #000; /* Set the background to black */
+  color: #e0e0e0; /* Light text color for contrast */
+}

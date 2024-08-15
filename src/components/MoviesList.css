@@ -1,0 +1,115 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.movie-card {
+  position: relative; /* Needed for overlay positioning */
+  background: linear-gradient(135deg, #833e2d, #220802);
+  border-radius: 12px;
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card.no-hover:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Faded white overlay for when tickets are 0 */
+.movie-card.faded-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly more opaque white */
+  border-radius: 12px; /* Match card corners */
+  z-index: 1; /* Ensure it covers everything */
+}
+
+.movie-poster {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2; /* Keep content above the overlay */
+}
+
+.movie-title,
+.available-tickets {
+  position: relative;
+  z-index: 2; /* Ensure text remains visible */
+  color: #fff;
+}
+
+.ticket-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Dropdown styling */
+.dropdown {
+  width: 90%;
+  border: none;
+  padding: 6px;
+  border-radius: 5px;
+  margin-top: 0px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown option {
+  background-color: #000;
+  color: #fff;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0c0c0c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+/* "Unavailable" button positioned below Available Tickets text */
+.unavailable-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  z-index: 2;
+  cursor: not-allowed;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+}

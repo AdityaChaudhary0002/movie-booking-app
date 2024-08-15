@@ -1,0 +1,70 @@
+/* Full-width Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between title and nav items */
+  background-color: #000; /* Black background */
+  width: 100vw; /* Full viewport width */
+  padding: 0px 50px; /* Reduced top and bottom padding */
+  position: fixed;
+  top: 0;
+  left: 0; /* Aligns to the left edge */
+  z-index: 1000;
+  /* border-bottom: 2px solid #444; Optional border for separation */
+  box-sizing: border-box;
+}
+
+/* Title Styles */
+.app-title {
+  font-size: 28px; /* Reduced font size */
+  font-weight: bold;
+  background: linear-gradient(to right, #ff7e5f, #351c07);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap; /* Prevents the title from wrapping */
+}
+
+/* Navigation Links Styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Reduced gap between links */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative; /* Position relative for pseudo-element positioning */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0e0; /* Default color */
+  font-size: 16px; /* Reduced font size */
+  padding: 8px; /* Adjusted padding */
+  transition: none; /* No color change on hover */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-links span {
+  color: #e0e0e0; /* Color for logout */
+  cursor: pointer;
+  padding: 8px; /* Adjusted padding */
+}

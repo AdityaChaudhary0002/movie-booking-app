@@ -1,0 +1,93 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Ensure full viewport height */
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.signup-form {
+    background: linear-gradient(135deg, #833e2d, #220802); /* Gradient color */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px 20px; /* Added right padding */
+    margin: 10px 0; /* Increased margin for spacing */
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.signup-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0c0c0c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Ensure button is treated as block element */
+    margin: 20px 0 0; /* Add space above the button */
+}
+
+.signup-button:hover {
+    background-color: #000000;
+}
+
+.error-message {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.form-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative; /* For positioning the underline */
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0; /* Position at the bottom of the tab */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #fff; /* Color of the underline */
+}
+
+.tab:hover {
+    color: #fff; /* Change text color on hover */
+}

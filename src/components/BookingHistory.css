@@ -1,0 +1,69 @@
+.booking-history {
+  padding: 20px;
+  background: linear-gradient(135deg, #833e2d, #220802);
+  color: #fff;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+.booking-history h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.booking-history ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.booking-item {
+  background: linear-gradient(135deg, #1e1e1e, #000000);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping of content if space is constrained */
+}
+
+.booking-item-left {
+  flex: 2;
+  min-width: 60%; /* Ensure the left side has enough space */
+}
+
+.booking-item-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  padding-left: 20px;
+  max-width: 35%; /* Restrict the poster width */
+}
+
+.booking-item h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.booking-item p {
+  margin: 5px 0;
+}
+
+.booking-poster {
+  max-width: 100%;
+  border-radius: 5px;
+  max-height: 150px;
+}
+
+.no-bookings {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.no-bookings p {
+  color: #999;
+  font-size: 18px;
+}
